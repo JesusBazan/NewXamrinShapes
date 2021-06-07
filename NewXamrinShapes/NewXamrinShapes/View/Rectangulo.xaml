@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewXamrinShapes.View.Rectangulo"
+             Title="Rectangulo">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label Text="Rectangulo simple"/>
+            <Rectangle
+                Fill="OrangeRed"
+                WidthRequest="200"
+                HeightRequest="100"
+                HorizontalOptions="Center"/>
+            <Label Text="Cuadrado simple con borde"/>
+            <Rectangle
+                Fill="OrangeRed"
+                Stroke="Black"
+                StrokeThickness="4"
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="Center"/>
+            <Label Text="Rectangulo simple con border radius"/>
+            <Rectangle
+                Stroke="Black"
+                StrokeThickness="3"
+                RadiusX="20"
+                RadiusY="20"
+                WidthRequest="200"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                        <GradientStop 
+                            Color="#EBD005"
+                            Offset="0"/>
+                        <GradientStop
+                            Color="#EB6905"
+                            Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

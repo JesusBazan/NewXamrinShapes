@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewXamrinShapes.View.Elipse">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label Text="Ellipse simple"/>
+            <Ellipse
+                Fill="OrangeRed"
+                WidthRequest="200"
+                HeightRequest="100"
+                HorizontalOptions="Center"/>
+            <Label Text="Ellipse simple con borde"/>
+            <Ellipse
+                Fill="OrangeRed"
+                Stroke="Black"
+                StrokeThickness="3"
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="Center"/>
+            <Label Text="Ellipse simple con borde punteado"/>
+            <Ellipse
+                Fill="DarkBlue"
+                Stroke="Red"
+                StrokeThickness="4"
+                StrokeDashArray="1,1"
+                StrokeDashOffset="6"
+                WidthRequest="200"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+            </Ellipse>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
