@@ -5,9 +5,78 @@
              Title="Menu">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Rectangulo" Clicked="Button_Clicked"/>
-            <Button Text="Elipse" Clicked="Button_Clicked_1"/>
-            <Button Text="Linea" Clicked="Button_Clicked_2"/>
+            <Button Text="Obtener informacion" Clicked="Button_Clicked"/>
+            <Label Text="Poblacion de estados unidos 2013 - 2018"/>
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal">
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [5].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [5].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#DF4DF9"/>
+                    <Label Text="{Binding [5].Year}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [4].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [4].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#9B44DB"/>
+                    <Label Text="{Binding [4].Year}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [3].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [3].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#DF4DF9"/>
+                    <Label Text="{Binding [3].Year}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [2].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [2].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#9B44DB"/>
+                    <Label Text="{Binding [2].Year}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [1].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [1].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#DF4DF9"/>
+                    <Label Text="{Binding [1].Year}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Vertical">
+                    <Label Text="{Binding [0].Population}"/>
+                    <Line
+                        StrokeThickness="20"
+                        X1="10"
+                        Y1="{Binding [0].PopulationNum}"
+                        X2="10"
+                        Y2="100"
+                        Stroke="#9B44DB"/>
+                    <Label Text="{Binding [0].Year}"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

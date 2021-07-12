@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using NewXamrinShapes.Clases;
+using NewXamrinShapes.Servicios;
+
 
 namespace NewXamrinShapes.View
 {
@@ -15,15 +18,21 @@ namespace NewXamrinShapes.View
         public Menu1()
         {
             InitializeComponent();
+            this.BindingContext = new ObjetoPoblacion[6];
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            var rectangulo = new Rectangulo();
-            Navigation.PushModalAsync(rectangulo);
-            NavigationPage.SetHasNavigationBar(rectangulo, true);
-            NavigationPage.SetHasBackButton(rectangulo, true);
-            
+            //var rectangulo = new Rectangulo();
+            //Navigation.PushModalAsync(rectangulo);
+            //NavigationPage.SetHasNavigationBar(rectangulo, true);
+            //NavigationPage.SetHasBackButton(rectangulo, true);
+            var poblacion = await ServicioPoblacion.ConsultarClima();
+
+            if (poblacion != null)
+            {
+                this.BindingContext = poblacion;
+            }
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
